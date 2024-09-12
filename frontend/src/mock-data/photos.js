@@ -1,3 +1,5 @@
+const publicUrl = import.meta.env.VITE_PUBLIC_URL || "";
+
 const photo1 = {
   id: "1",
   location: {
@@ -5,14 +7,14 @@ const photo1 = {
     country: "Canada",
   },
   urls: {
-    full: `${process.env.PUBLIC_URL}/image-1-Full.png`,
-    // regular: `${process.env.PUBLIC_URL}/Image-1-Regular.jpeg`,
+    full: `${publicUrl}/image-1.png`,
+    // regular: `${publicUrl}/Image-1-Regular.jpeg`,
   },
   user: {
     id: "1",
     username: "exampleuser",
     name: "Joe Example",
-    profile: `${process.env.PUBLIC_URL}/profile-1.jpg`,
+    profile: `${publicUrl}/profile-1.jpg`,
   },
 };
 
@@ -23,14 +25,14 @@ const photo2 = {
     country: "Canada",
   },
   urls: {
-    full: `${process.env.PUBLIC_URL}/image-2.png`,
-    // regular: `${process.env.PUBLIC_URL}/Image-2-Regular.jpeg`,
+    full: `${publicUrl}/image-2.png`,
+    // regular: `${publicUrl}/Image-2-Regular.jpeg`,
   },
   user: {
     id: "2",
     username: "exampleuser",
     name: "Joe Example",
-    profile: `${process.env.PUBLIC_URL}/profile-1.jpg`,
+    profile: `${publicUrl}/profile-1.jpg`,
   },
 };
 
@@ -41,14 +43,14 @@ const photo3 = {
     country: "Canada",
   },
   urls: {
-    full: `${process.env.PUBLIC_URL}/image-3.png`,
-    regular: `${process.env.PUBLIC_URL}/Image-3-Regular.jpeg`,
+    full: `${publicUrl}/image-3.png`,
+    regular: `${publicUrl}/Image-3-Regular.jpeg`,
   },
   user: {
     id: "3",
     username: "exampleuser",
     name: "Joe Example",
-    profile: `${process.env.PUBLIC_URL}/profile-1.jpg`,
+    profile: `${publicUrl}/profile-1.jpg`,
   },
 };
 
