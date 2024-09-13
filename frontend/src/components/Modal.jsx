@@ -1,4 +1,4 @@
-import PropTypes from "prop-types";
+// import PropTypes from "prop-types";
 import "./Modal.scss";
 
 function Modal({ isOpen, onClose, photo }) {
@@ -15,6 +15,21 @@ function Modal({ isOpen, onClose, photo }) {
           ×
         </button>
         <img id="img-modal" src={photo.urls.full} alt={`Photo by ${photo.user.name}`} />
+      </div>
+      <div className="similar-photos">
+        <h2>Similar Photos</h2>
+        <div className="similar-photos-grid">
+          {photo.similar_photos.map((similarPhoto) => (
+            <div
+              key={similarPhoto.id}
+              className="similar-photo-item">
+              <img
+                src={similarPhoto.urls.full}
+                alt={`Similar photo by ${similarPhoto.user.name}`}
+              />
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

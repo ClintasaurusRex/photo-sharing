@@ -1,14 +1,46 @@
 .modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.7);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
+  background-color: white;
+  box-shadow: 0 0 0 50vmax rgba(0,0,0,.5);
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  height: 80%;
+  width: 55%;
+  overflow-y: scroll;
+  border-radius: 12px;
+  .similar-photos {
+    margin-top: 20px;
+  }
+
+  .similar-photos h2 {
+    margin-bottom: 10px;
+  }
+
+  .similar-photos-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .similar-photo-item {
+    flex: 1 1 calc(25% - 10px);
+    max-width: calc(25% - 10px);
+    box-sizing: border-box;
+  }
+
+  .similar-photo-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    transition: transform 0.3s;
+  }
+
+  .similar-photo-item img:hover {
+    transform: scale(1.05);
+  }
+
 }
 
 .modal-content {
@@ -31,13 +63,9 @@
   cursor: pointer;
 }
 
-// .modal-img {
-//   width: 500px;
-//   height: 300px;
-//   object-fit: cover; /* Ensures the image covers the specified dimensions */
-// }
 #img-modal {
       /* width: 267px; */
       max-width: 100%;
       max-height: 100%;
 }
+
