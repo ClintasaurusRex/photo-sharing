@@ -7,7 +7,7 @@ function Modal({ isOpen, onClose, photo }) {
     <div className="modal-overlay" onClick={onClose}>
       <div className="modal-content" >
         <button className="modal-close" onClick={onClose}>×</button>
-        <img src={photo.urls.full} alt={`Photo by ${photo.user.name}`} />
+        <img className='modal-img' src={photo.urls.full} alt={`Photo by ${photo.user.name}`} />
       </div>
     </div>
   );
