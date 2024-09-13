@@ -2,13 +2,15 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 16px;
+  gap: 36px;
+  grid-template-columns: 5, 1fr;
 }
 
 .photo-item {
   border: 1px solid #ccc;
   padding: 8px;
   border-radius: 4px;
+  width: 16%;
 }
 
 .photo-item img {

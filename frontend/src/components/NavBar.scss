@@ -4,7 +4,7 @@
   align-items: center;
   background-color: #333;
   padding: 10px 20px;
-  width: 100%;
+  width: 97%;
 }
 
 .navbar-links {
@@ -25,4 +25,7 @@
 
 .navbar-links a:hover {
   text-decoration: underline;
+}
+input.search-input{
+  margin-left: 3.1em;
 }

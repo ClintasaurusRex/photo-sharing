@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import "./UploadForm.scss";
 
 function UploadForm({ addPhoto }) {
   const [photo, setPhoto] = useState(null);
@@ -9,6 +10,7 @@ function UploadForm({ addPhoto }) {
       const reader = new FileReader();
       reader.onloadend = () => {
         addPhoto(reader.result);
+        console.log("photo added");
       };
       reader.readAsDataURL(photo);
       setPhoto(null);
@@ -18,11 +20,12 @@ function UploadForm({ addPhoto }) {
   return (
     <form onSubmit={handleSubmit}>
       <input
+        className="choose-file"
         type="file"
         accept="image/*"
         onChange={(e) => setPhoto(e.target.files[0])}
       />
-      <button type="submit">Upload Photo</button>
+      <button className="upload-photo" type="submit">Upload Photo</button>
     </form>
   );
 }

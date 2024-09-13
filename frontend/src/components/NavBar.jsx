@@ -24,6 +24,7 @@ const NavBar = () => {
       </ul>
       <form className="search-bar" onSubmit={handleSeach}>
         <input
+          className="search-input"
           type="text"
           placeholder="Search..."
           value={search}
