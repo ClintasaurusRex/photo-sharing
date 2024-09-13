@@ -16,6 +16,8 @@ function Modal({ isOpen, onClose, photo }) {
         </button>
         <img id="img-modal" src={photo.urls.full} alt={`Photo by ${photo.user.name}`} />
       </div>
+      <p>{photo.location.city}, {photo.location.country}</p>
+      <p>By: {photo.user.name}</p>
       <div className="similar-photos">
         <h2>Similar Photos</h2>
         <div className="similar-photos-grid">
@@ -27,6 +29,8 @@ function Modal({ isOpen, onClose, photo }) {
                 src={similarPhoto.urls.full}
                 alt={`Similar photo by ${similarPhoto.user.name}`}
               />
+              <p>{similarPhoto.location.city}, {similarPhoto.location.country}</p>
+              <p>By: {similarPhoto.user.name}</p>
             </div>
           ))}
         </div>

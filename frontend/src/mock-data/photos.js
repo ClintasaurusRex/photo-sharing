@@ -3,8 +3,8 @@ const publicUrl = import.meta.env.VITE_PUBLIC_URL || "";
 const photo1 = {
   id: "1",
   location: {
-    city: "Montreal",
-    country: "Canada",
+    city: "New York",
+    country: "USA",
   },
   urls: {
     full: `${publicUrl}/image-1.png`,
@@ -21,8 +21,8 @@ const photo1 = {
 const photo2 = {
   id: "2",
   location: {
-    city: "Toronto",
-    country: "Canada",
+    city: "London",
+    country: "UK",
   },
   urls: {
     full: `${publicUrl}/image-2.png`,
@@ -39,8 +39,8 @@ const photo2 = {
 const photo3 = {
   id: "3",
   location: {
-    city: "Ottawa",
-    country: "Canada",
+    city: "Paris",
+    country: "France",
   },
   urls: {
     full: `${publicUrl}/image-3.png`,
@@ -57,8 +57,8 @@ const photo3 = {
 const photo4 = {
   id: "4",
   location: {
-    city: "Victoria",
-    country: "Canada",
+    city: "Tokyo",
+    country: "Japan",
   },
   urls: {
     full: `${publicUrl}/image-4.png`,
@@ -75,8 +75,8 @@ const photo4 = {
 const photo5 = {
   id: "5",
   location: {
-    city: "Ottawa",
-    country: "Canada",
+    city: "Berlin",
+    country: "Germany",
   },
   urls: {
     full: `${publicUrl}/image-5.png`,
@@ -93,8 +93,8 @@ const photo5 = {
 const photo6 = {
   id: "6",
   location: {
-    city: "Ottawa",
-    country: "Canada",
+    city: "Sydney",
+    country: "Australia",
   },
   urls: {
     full: `${publicUrl}/image-6.png`,
@@ -111,8 +111,8 @@ const photo6 = {
 const photo7 = {
   id: "7",
   location: {
-    city: "Ottawa",
-    country: "Canada",
+    city: "Rome",
+    country: "Italy",
   },
   urls: {
     full: `${publicUrl}/image-7.png`,
@@ -129,8 +129,8 @@ const photo7 = {
 const photo8 = {
   id: "8",
   location: {
-    city: "Ottawa",
-    country: "Canada",
+    city: "Barcelona",
+    country: "Spain",
   },
   urls: {
     full: `${publicUrl}/image-8.png`,
@@ -147,8 +147,8 @@ const photo8 = {
 const photo9 = {
   id: "9",
   location: {
-    city: "Ottawa",
-    country: "Canada",
+    city: "Moscow",
+    country: "Russia",
   },
   urls: {
     full: `${publicUrl}/image-9.png`,
@@ -165,8 +165,8 @@ const photo9 = {
 const photo10 = {
   id: "10",
   location: {
-    city: "Ottawa",
-    country: "Canada",
+    city: "Dubai",
+    country: "UAE",
   },
   urls: {
     full: `${publicUrl}/image-10.png`,
