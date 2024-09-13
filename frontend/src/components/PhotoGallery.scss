@@ -22,3 +22,15 @@
 .photo-info {
   margin-top: 8px;
 }
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .photo-item {
+    width: 45%; /* Adjust width for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .photo-item {
+    width: 100%; /* Full width for very small screens */
+  }
+}
