@@ -31,8 +31,13 @@
   cursor: pointer;
 }
 
-.modal-img {
-  width: 500px;
-  height: 300px;
-  object-fit: cover; /* Ensures the image covers the specified dimensions */
+// .modal-img {
+//   width: 500px;
+//   height: 300px;
+//   object-fit: cover; /* Ensures the image covers the specified dimensions */
+// }
+#img-modal {
+      /* width: 267px; */
+      max-width: 100%;
+      max-height: 100%;
 }

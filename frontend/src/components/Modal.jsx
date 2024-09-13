@@ -14,23 +14,23 @@ function Modal({ isOpen, onClose, photo }) {
         <button className="modal-close" onClick={onClose}>
           ×
         </button>
-        <img src={photo.urls.full} alt={`Photo by ${photo.user.name}`} />
+        <img id="img-modal" src={photo.urls.full} alt={`Photo by ${photo.user.name}`} />
       </div>
     </div>
   );
 }
 
-Modal.propTypes = {
-  isOpen: PropTypes.bool.isRequired,
-  onClose: PropTypes.func.isRequired,
-  photo: PropTypes.shape({
-    urls: PropTypes.shape({
-      full: PropTypes.string.isRequired,
-    }).isRequired,
-    user: PropTypes.shape({
-      name: PropTypes.string.isRequired,
-    }).isRequired,
-  }).isRequired,
-};
+// Modal.propTypes = {
+//   isOpen: PropTypes.bool.isRequired,
+//   onClose: PropTypes.func.isRequired,
+//   photo: PropTypes.shape({
+//     urls: PropTypes.shape({
+//       full: PropTypes.string.isRequired,
+//     }).isRequired,
+//     user: PropTypes.shape({
+//       name: PropTypes.string.isRequired,
+//     }).isRequired,
+//   }).isRequired,
+// };
 
 export default Modal;
