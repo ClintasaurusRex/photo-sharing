@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #333;
+  background-color: rgb(13 46 87);
   padding: 10px 20px;
   width: 97%;
 }
@@ -28,4 +28,8 @@
 }
 input.search-input{
   margin-left: 3.1em;
+}
+.pixl-cloud {
+  height: 44px;
+  width: 269px;
 }

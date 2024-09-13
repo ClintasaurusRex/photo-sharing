@@ -1,6 +1,7 @@
 import "./NavBar.scss";
 import { useState } from "react";
 
+
 const NavBar = () => {
   const [search, setSearch] = useState("");
 
@@ -22,6 +23,7 @@ const NavBar = () => {
         <li><a href="/users">Users</a></li>
         <li><a href="/about">About</a></li>
       </ul>
+      <img className="pixl-cloud" src="/pixlcloudheader.png" alt="photo" />
       <form className="search-bar" onSubmit={handleSeach}>
         <input
           className="search-input"
