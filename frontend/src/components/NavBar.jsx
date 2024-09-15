@@ -23,6 +23,7 @@ const NavBar = () => {
         <li><a href="/users">Users</a></li>
         <li><a href="/about">About</a></li>
       </ul>
+
       <img className="pixl-cloud" src="/pixlcloudheader.png" alt="photo" />
       <form className="search-bar" onSubmit={handleSeach}>
         <input
@@ -33,7 +34,10 @@ const NavBar = () => {
           onChange={InputChange}
         />
       </form>
-
+      <ul className="login-signup">
+        <li><a href="/login">Login</a></li>
+        <li><a href="/signup">Sign Up</a></li>
+      </ul>
     </nav>
   );
 };
