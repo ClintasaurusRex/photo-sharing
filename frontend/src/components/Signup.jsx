@@ -10,7 +10,7 @@ function Signup() {
     <div className="signup-container">
       <h1>Sign Up</h1>
       <form onSubmit={handleSubmit}>
-        <div>
+        <div className="signup-form">
           <label htmlFor="username">Username:</label>
           <input
             type="text"
@@ -21,7 +21,7 @@ function Signup() {
             required
           />
         </div>
-        <div>
+        <div className="signup-form">
           <label htmlFor="email">Email:</label>
           <input
             type="email"
@@ -32,7 +32,8 @@ function Signup() {
             required
           />
         </div>
-        <div>
+        <div className="signup-form">
+
           <label htmlFor="password">Password:</label>
           <input
             type="password"
@@ -43,7 +44,7 @@ function Signup() {
             required
           />
         </div>
-        <div>
+        <div className="signup-form">
           <label htmlFor="confirmPassword">Confirm Password:</label>
           <input
             type="password"
