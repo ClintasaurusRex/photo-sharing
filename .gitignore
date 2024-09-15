@@ -1,3 +1,3 @@
 master.key
-database.yml
-node_modules
+node_modules/
+config/database.yml
