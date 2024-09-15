@@ -1,19 +1,9 @@
 import "./NavBar.scss";
-import { useState } from "react";
+import useSearch from "../hooks/useSearch";
 
 
 const NavBar = () => {
-  const [search, setSearch] = useState("");
-
-  const InputChange = (e) => {
-    setSearch(e.target.value);
-  };
-
-  const handleSeach = (e) => {
-    e.preventDefault();
-    console.log(search);
-
-  };
+  const { search, InputChange, handleSearch } = useSearch();
 
   return (
     <nav className="navbar">
@@ -25,7 +15,7 @@ const NavBar = () => {
       </ul>
 
       <img className="pixl-cloud" src="/pixlcloudheader.png" alt="photo" />
-      <form className="search-bar" onSubmit={handleSeach}>
+      <form className="search-bar" onSubmit={handleSearch}>
         <input
           className="search-input"
           type="text"
@@ -34,7 +24,7 @@ const NavBar = () => {
           onChange={InputChange}
         />
       </form>
-      <ul className="login-signup">
+      <ul className="navbar-links">
         <li><a href="/login">Login</a></li>
         <li><a href="/signup">Sign Up</a></li>
       </ul>
