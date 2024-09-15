@@ -78,6 +78,7 @@ GEM
       tzinfo (~> 2.0, >= 2.0.5)
     ast (2.4.2)
     base64 (0.2.0)
+    bcrypt (3.1.20)
     bigdecimal (3.1.8)
     bootsnap (1.18.4)
       msgpack (~> 1.2)
@@ -143,6 +144,7 @@ GEM
     parser (3.3.5.0)
       ast (~> 2.4.1)
       racc
+    pg (1.5.8)
     psych (5.1.2)
       stringio
     puma (6.4.2)
@@ -249,9 +251,11 @@ PLATFORMS
 
 DEPENDENCIES
   active_model_serializers
+  bcrypt (~> 3.1.7)
   bootsnap
   brakeman
   debug
+  pg
   puma (>= 5.0)
   rack-cors
   rails (~> 7.2.1)
