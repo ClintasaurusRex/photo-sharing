@@ -6,6 +6,7 @@ function Modal({ isOpen, onClose, photo }) {
 
   const handleContentClick = (e) => {
     e.stopPropagation();
+    console.log("Hello");
   };
 
   return (
