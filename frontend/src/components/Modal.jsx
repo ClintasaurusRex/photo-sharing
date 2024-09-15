@@ -2,8 +2,6 @@
 import "./Modal.scss";
 
 function Modal({ isOpen, onClose, photo }) {
-  const location = props;
-
   if (!isOpen) return null;
 
   const handleContentClick = (e) => {
