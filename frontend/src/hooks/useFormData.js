@@ -1,4 +1,5 @@
 import { useState } from "react";
+import axios from "axios";
 
 const useFormData = () => {
   const [formData, setFormData] = useState({
@@ -16,10 +17,18 @@ const useFormData = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form Submitted", formData);
-    // Handle form submission logic here
+    try {
+      const response = await axios.post(
+        "http://localhost:3000/users",
+        { user: formData } // Nest formData under the user key
+      );
+      console.log("Form Submitted", formData);
+    } catch (error) {
+      console.error("Error:", error);
+      // Handle error, e.g., show an error message to the user
+    }
   };
 
   const handleClick = (e) => {

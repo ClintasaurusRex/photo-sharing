@@ -1,10 +1,18 @@
 import useFormData from "../hooks/useFormData";
+import { useNavigate } from 'react-router-dom';
 import EmailPass from "./Email-Pass";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "./Signup.scss";
 
 const Signup = () => {
-  const { formData, handleChange, handleSubmit } = useFormData();
+
+  const navigate = useNavigate();
+
+  const onSuccess = () => {
+    navigate('/');
+  };
+
+  const { formData, handleChange, handleSubmit } = useFormData(onSuccess);
 
   return (
     <div className="signup-container">
@@ -17,7 +25,7 @@ const Signup = () => {
             type="text"
             id="fullName"
             name="fullName"
-            placeholder="Jon Snow"
+            placeholder="Ash Williams"
             value={formData.fullName}
             onChange={handleChange}
             required
