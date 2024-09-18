@@ -1,6 +1,7 @@
-import useFormData from '../hooks/useFormData';
-import '@fortawesome/fontawesome-free/css/all.min.css';
+import useFormData from "../hooks/useFormData";
+import "@fortawesome/fontawesome-free/css/all.min.css";
 import "./Signup.scss";
+import EmailPass from "./Email-Pass";
 
 const Signup = () => {
   const { formData, handleChange, handleSubmit } = useFormData();
@@ -22,45 +23,11 @@ const Signup = () => {
             required
           />
         </div>
+        <EmailPass />
 
-        <div className="form-group">
-          <label htmlFor="email">Email</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="your@email.com"
-            value={formData.email}
-            onChange={handleChange}
-            required
-          />
-        </div>
-
-        <div className="form-group">
-          <label htmlFor="password">Password</label>
-          <input
-            type="password"
-            id="password"
-            name="password"
-            placeholder="●●●●●●●"
-            value={formData.password}
-            onChange={handleChange}
-            required
-          />
-        </div>
-
-        <div className="form-group checkbox-group">
-          <input
-            type="checkbox"
-            id="receiveUpdates"
-            name="receiveUpdates"
-            checked={formData.receiveUpdates}
-            onChange={handleChange}
-          />
-          <label htmlFor="receiveUpdates">I want to receive updates via email.</label>
-        </div>
-
-        <button type="submit" className="signup-btn">Sign up</button>
+        <button type="submit" className="signup-btn">
+          Sign up
+        </button>
 
         <p className="signin-link">
           Already have an account? <a href="/signin">Sign in</a>
