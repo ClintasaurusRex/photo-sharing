@@ -23,7 +23,7 @@ const Signup = () => {
             required
           />
         </div>
-        <EmailPass />
+        <EmailPass formData={formData} handleChange={handleChange} />
 
         <button type="submit" className="signup-btn">
           Sign up
@@ -37,12 +37,7 @@ const Signup = () => {
           <span>or</span>
         </div>
 
-        <button type="button" className="social-signup-btn google">
-          <i className="fab fa-google"></i> Sign up with Google
-        </button>
-        <button type="button" className="social-signup-btn facebook">
-          <i className="fab fa-facebook"></i> Sign up with Facebook
-        </button>
+
       </form>
     </div>
   );
