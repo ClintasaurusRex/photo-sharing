@@ -1,5 +1,6 @@
-import useFormData from '../hooks/useFormData';
-import '@fortawesome/fontawesome-free/css/all.min.css';
+import useFormData from "../hooks/useFormData";
+import EmailPass from "./Email-Pass";
+import "@fortawesome/fontawesome-free/css/all.min.css";
 import "./Signup.scss";
 
 const Signup = () => {
@@ -22,45 +23,11 @@ const Signup = () => {
             required
           />
         </div>
+        <EmailPass formData={formData} handleChange={handleChange} />
 
-        <div className="form-group">
-          <label htmlFor="email">Email</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="your@email.com"
-            value={formData.email}
-            onChange={handleChange}
-            required
-          />
-        </div>
-
-        <div className="form-group">
-          <label htmlFor="password">Password</label>
-          <input
-            type="password"
-            id="password"
-            name="password"
-            placeholder="●●●●●●●"
-            value={formData.password}
-            onChange={handleChange}
-            required
-          />
-        </div>
-
-        <div className="form-group checkbox-group">
-          <input
-            type="checkbox"
-            id="receiveUpdates"
-            name="receiveUpdates"
-            checked={formData.receiveUpdates}
-            onChange={handleChange}
-          />
-          <label htmlFor="receiveUpdates">I want to receive updates via email.</label>
-        </div>
-
-        <button type="submit" className="signup-btn">Sign up</button>
+        <button type="submit" className="signup-btn">
+          Sign up
+        </button>
 
         <p className="signin-link">
           Already have an account? <a href="/signin">Sign in</a>
@@ -70,12 +37,7 @@ const Signup = () => {
           <span>or</span>
         </div>
 
-        <button type="button" className="social-signup-btn google">
-          <i className="fab fa-google"></i> Sign up with Google
-        </button>
-        <button type="button" className="social-signup-btn facebook">
-          <i className="fab fa-facebook"></i> Sign up with Facebook
-        </button>
+
       </form>
     </div>
   );

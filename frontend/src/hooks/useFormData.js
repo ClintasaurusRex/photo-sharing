@@ -21,7 +21,14 @@ const useFormData = () => {
     console.log("Form Submitted", formData);
     // Handle form submission logic here
   };
-  return { formData, handleChange, handleSubmit };
+
+  const handleClick = (e) => {
+    e.preventDefault();
+    console.log("Button Clicked");
+    // Handle form submission logic here
+  };
+
+  return { formData, handleChange, handleSubmit, handleClick };
 };
 
 export default useFormData;
