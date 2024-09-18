@@ -1,7 +1,7 @@
 import useFormData from "../hooks/useFormData";
+import EmailPass from "./Email-Pass";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "./Signup.scss";
-import EmailPass from "./Email-Pass";
 
 const Signup = () => {
   const { formData, handleChange, handleSubmit } = useFormData();
