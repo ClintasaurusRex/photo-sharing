@@ -24,7 +24,7 @@ const useFormData = () => {
         "http://localhost:3000/users",
         { user: formData } // Nest formData under the user key
       );
-      console.log("Form Submitted", formData);
+      console.log("Form Submitted", response.data);
     } catch (error) {
       console.error("Error:", error);
       // Handle error, e.g., show an error message to the user
