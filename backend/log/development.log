@@ -272,3 +272,32 @@ Processing by UsersController#create as HTML
 Completed 201 Created in 188ms (Views: 0.5ms | ActiveRecord: 2.8ms (1 query, 0 cached) | GC: 0.0ms)
 
 
+Started POST "/users" for ::1 at 2024-09-23 13:33:12 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"fullName"=>"chickencoop", "email"=>"[FILTERED]", "password"=>"[FILTERED]", "receiveUpdates"=>false}}
+[31mUnpermitted parameters: :fullName, :receiveUpdates. Context: { controller: UsersController, action: create, request: #<ActionDispatch::Request:0x0000789266992a20>, params: {"user"=>{"fullName"=>"chickencoop", "email"=>"[FILTERED]", "password"=>"[FILTERED]", "receiveUpdates"=>false}, "controller"=>"users", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Create (3.3ms)[0m  [1m[32mINSERT INTO "users" ("full_name", "email", "password_digest", "receive_updates", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["full_name", nil], ["email", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["receive_updates", false], ["created_at", "2024-09-23 20:33:12.694489"], ["updated_at", "2024-09-23 20:33:12.694489"]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.14ms)
+Completed 201 Created in 177ms (Views: 3.0ms | ActiveRecord: 13.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2024-09-23 13:33:34 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"fullName"=>"", "email"=>"[FILTERED]", "password"=>"[FILTERED]", "receiveUpdates"=>false}}
+[31mUnpermitted parameters: :fullName, :receiveUpdates. Context: { controller: UsersController, action: create, request: #<ActionDispatch::Request:0x000078926639f438>, params: {"user"=>{"fullName"=>"", "email"=>"[FILTERED]", "password"=>"[FILTERED]", "receiveUpdates"=>false}, "controller"=>"users", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Create (1.3ms)[0m  [1m[32mINSERT INTO "users" ("full_name", "email", "password_digest", "receive_updates", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["full_name", nil], ["email", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["receive_updates", false], ["created_at", "2024-09-23 20:33:34.216259"], ["updated_at", "2024-09-23 20:33:34.216259"]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.19ms)
+Completed 201 Created in 160ms (Views: 0.7ms | ActiveRecord: 3.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+

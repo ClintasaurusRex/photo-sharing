@@ -1,8 +1,6 @@
-
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import EmailPass from './Email-Pass';
-import useFormData from '../hooks/useFormData';
+import { useNavigate } from "react-router-dom";
+import EmailPass from "./Email-Pass";
+import useFormData from "../hooks/useFormData";
 import "./Login.scss";
 
 function Login() {
@@ -10,7 +8,7 @@ function Login() {
   const navigate = useNavigate();
 
   const handleSignUpClick = () => {
-    navigate('/signup');
+    navigate("/signup");
   };
 
   return (
@@ -18,8 +16,12 @@ function Login() {
       <form onSubmit={handleSubmit} className="login-form">
         <h1>Login</h1>
         <EmailPass formData={formData} handleChange={handleChange} />
-        <button type="submit" className="login-btn">Login</button>
-        <button type="button" className="login-btn" onClick={handleSignUpClick}>Sign Up</button>
+        <button type="submit" className="login-btn">
+          Login
+        </button>
+        <button type="button" className="login-btn" onClick={handleSignUpClick}>
+          Sign Up
+        </button>
       </form>
     </div>
   );
