@@ -6,4 +6,8 @@ class SessionsController < ApplicationController
             render json: {error: 'Invalid username or password'}, status: :unauthorized
         end
     end
+    def destroy
+        session[:user_id] = nil
+        render json: { message: "Logout successful" }, status: :ok
+      end
 end

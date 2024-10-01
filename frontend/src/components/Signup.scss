@@ -114,3 +114,21 @@ input#fullName {
   content: "\f09a";
   padding: 10px;
 }
+
+.logout-btn {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #666;
+  background-color: #333;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logout-btn:hover {
+  background-color: #555;
+}
