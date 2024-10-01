@@ -607,3 +607,13 @@ Processing by SessionsController#create as */*
 Completed 200 OK in 179ms (Views: 1.1ms | ActiveRecord: 5.8ms (1 query, 0 cached) | GC: 0.9ms)
 
 
+Started POST "/login" for ::1 at 2024-10-01 16:01:25 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"[FILTERED]", "password"=>"[FILTERED]", "session"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 200 OK in 167ms (Views: 0.9ms | ActiveRecord: 4.5ms (1 query, 0 cached) | GC: 0.8ms)
+
+
