@@ -4,7 +4,7 @@ import useFormData from "../hooks/useFormData";
 import "./Login.scss";
 
 function Login() {
-  const { formData, handleChange, handleSubmit } = useFormData();
+  const { formData, handleChange, handleLogin } = useFormData();
   const navigate = useNavigate();
 
   const handleSignUpClick = () => {
@@ -13,7 +13,7 @@ function Login() {
 
   return (
     <div className="login-container">
-      <form onSubmit={handleSubmit} className="login-form">
+      <form onSubmit={handleLogin} className="login-form">
         <h1>Login</h1>
         <EmailPass formData={formData} handleChange={handleChange} />
         <button type="submit" className="login-btn">

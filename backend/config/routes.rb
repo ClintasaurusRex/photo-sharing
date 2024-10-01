@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
-  resources :users, only: %i[index show create]
-  resources :photos, only: %i[index show create]
-  resources :likes, only: [:create]
+  Rails.application.routes.draw do
+    resources :users
+    resources :posts
+    resources :photos
+    resources :likes
+    post 'login', to: 'sessions#create'
+  end
+  
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
@@ -12,3 +17,8 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "posts#index"
 end
+
+
+# resources :users, only: %i[index show create]
+# resources :photos, only: %i[index show create]
+# resources :likes, only: [:create]
