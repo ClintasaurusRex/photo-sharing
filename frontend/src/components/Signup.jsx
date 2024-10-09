@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import useFormData from "../hooks/useFormData";
 import { useNavigate } from "react-router-dom";
 import EmailPass from "./Email-Pass";
