@@ -9,6 +9,11 @@ import SignUp from "./components/Signup";
 
 function App() {
   const [photos, setPhotos] = useState([]);
+  const [displayedPhotos, setDisplayedPhotos] = useState(photos);
+
+  const handleSearch = (searchResults) => {
+    setDisplayedPhotos(searchResults);
+  };
 
   const addPhoto = (photo) => {
     setPhotos([...photos, photo]);
@@ -17,14 +22,14 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <NavBar />
+        <NavBar onSearch={handleSearch} />
         <Routes>
           <Route
             path="/"
             element={
               <>
                 <UploadForm addPhoto={addPhoto} />
-                <PhotoGallery photos={photos} />
+                <PhotoGallery photos={displayedPhotos} />
               </>
             }
           />
